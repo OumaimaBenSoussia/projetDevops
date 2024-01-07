@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: backend-app
+  template:
+    metadata:
+      labels:
+        app: backend-app
+    spec:
+      dnsPolicy: Default
+      containers:
+      - name: backend-app
+        image: oumaimabensoussia/backend-app:latest
+        ports:
+        - containerPort: 3006
