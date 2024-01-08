@@ -17,4 +17,4 @@ spec:
       - name: backend-app
         image: oumaimabensoussia/backend-app:latest
         ports:
-        - containerPort: 3006
+        - containerPort: 3000
